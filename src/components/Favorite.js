@@ -22,7 +22,8 @@ const Favorite = () => {
   const fItems = favItems.map((item) => item.price * item.qnty);
 
   let summation = fItems.reduce(
-    (accumulator, currentValue) => accumulator + currentValue
+    (accumulator, currentValue) => { 
+      return (accumulator + currentValue)},0
   );
 
   return (
