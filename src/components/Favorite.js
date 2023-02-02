@@ -10,7 +10,7 @@ const Favorite = () => {
   const dltFunc = (id) => {
     dispatch(removeFromcart(id));
   };
-  const dltAll = (id) => {
+  const dltAll = () => {
     dispatch(emtCart());
   };
   const inc = (item) => {

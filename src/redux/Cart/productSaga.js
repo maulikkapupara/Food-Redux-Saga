@@ -17,6 +17,9 @@ function* searchProducts(data) {
     let result = yield fetch(`https://api.spoonacular.com/recipes/complexSearch?apiKey=${process.env.REACT_APP_KEY}&query=${data.query}&number=20`);
     result = yield result.json();
     result= yield result.results
+    result.forEach(element => {
+        element.price = Math.floor(Math.random() * 100 + 10)
+      });
     yield put({type: SET_PRODUCT_LIST, data:result})
 }
 
