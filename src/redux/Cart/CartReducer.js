@@ -35,7 +35,6 @@ export const cartReducer = (state = intialState, action) => {
       }
 
     case RMV_FROM_CART:
-      console.log(action.payload);
       const finalState = state.carts.filter(
         (item) => item.id !== action.payload
       );

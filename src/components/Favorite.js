@@ -4,7 +4,6 @@ import { removeFromcart, emtCart, incItem, decItem } from "../redux";
 
 const Favorite = () => {
   const favItems = useSelector((state) => state.cartReducer.carts);
-  console.log(favItems);
   const dispatch = useDispatch();
 
   const dltFunc = (id) => {
